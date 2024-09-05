@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Light pastel pink */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #e6e6fa; /* Light pastel purple */
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+#anime-results {
+  list-style: none;
+  padding: 0;
+}
+
+.anime-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.anime-card img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.anime-card .content {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  align-items: flex-start;
+  margin-left: 10px;
+  justify-content: space-between;
+}
+
+.anime-card .anime-type {
+  margin-top: 5px;
+}
+
+.anime-card .title {
+  margin: 0;
+  font-weight: bold;
+  text-align: left;
+}
+
+.anime-card .year {
+  margin: 0;
+  font-style: italic;
+}
+
+.anime-genres {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.anime-genres li {
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  width: 100px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999; /* Ensure it appears above other elements */
+  font-size: 12px;
+}
