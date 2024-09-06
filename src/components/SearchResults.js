@@ -1,12 +1,16 @@
+import React from "react";
 import AnimeCard from "./AnimeCard";
 
-function SearchResults({ animes }) {
+function SearchResults({ results }) {
   return (
-    <ul id="anime-results">
-      {animes.map((anime) => (
-        <AnimeCard key={anime.mal_id} anime={anime} />
-      ))}
-    </ul>
+    results && (
+      <ul id="anime-results">
+        {results.length > 0 &&
+          results.map((anime) => (
+            <AnimeCard key={anime.mal_id} anime={anime} />
+          ))}
+      </ul>
+    )
   );
 }
 
