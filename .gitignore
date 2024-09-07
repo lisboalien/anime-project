@@ -10,6 +10,7 @@
 /build
 public/*
 !public/index.html
+!public/images
 
 # misc
 .DS_Store

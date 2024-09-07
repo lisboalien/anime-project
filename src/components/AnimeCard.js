@@ -12,7 +12,7 @@ function AnimeCard({ anime }) {
 
   const imageURL =
     anime.rating === "Rx - Hentai"
-      ? "../../public/images/censored.jpg"
+      ? "/images/censored.jpg"
       : anime.images.jpg.image_url;
 
   return (
