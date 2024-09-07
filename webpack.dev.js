@@ -5,7 +5,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"),
   },
   module: {
     rules: [
@@ -24,6 +24,16 @@ module.exports = {
         use: ["style-loader", "css-loader"], // Use style-loader and optionally css-loader
       },
     ],
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "public"), // Serve content from the build directory
+    },
+    compress: true,
+    port: 9000,
+    open: true,
+    hot: true,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: [".js", ".jsx"],
