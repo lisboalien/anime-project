@@ -1,12 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "build"),
     publicPath: "/",
   },
   module: {
@@ -31,10 +32,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "public/images", to: "images" }, // Copy images folder to build/images
+      ],
+    }),
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, "public"), // Serve content from the build directory
+      directory: path.join(__dirname, "build"), // Serve content from the build directory
     },
     compress: true,
     port: 9000,

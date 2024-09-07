@@ -22,12 +22,20 @@ function AnimeCard({ anime }) {
         <span className="anime-type">
           <i
             className={getIconClass(anime.type)}
-            data-tooltip-id={anime.type.toLowerCase().replace(" ", "-")}
-            data-tooltip-content={anime.type}
+            data-tooltip-id={
+              anime.type !== null
+                ? anime.type.toLowerCase().replace(" ", "-")
+                : "null"
+            }
+            data-tooltip-content={anime.type !== null ? anime.type : "N/A"}
             data-tooltip-place="right"
           ></i>
           <Tooltip
-            id={anime.type.toLowerCase().replace(" ", "-")}
+            id={
+              anime.type !== null
+                ? anime.type.toLowerCase().replace(" ", "-")
+                : "null"
+            }
             className="diff-arrow"
             classNameArrow="arrow"
           />
