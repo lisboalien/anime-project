@@ -7,7 +7,7 @@ Um aplicativo React para buscar e descobrir informações sobre animes.
 1. Clone o repositório:
 
    ```bash
-   git clone [https://github.com/lisboalien/anime-project.git]
+   git clone https://github.com/lisboalien/anime-project.git
    ```
 
 2. Instale as dependências:
